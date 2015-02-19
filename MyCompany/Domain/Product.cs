@@ -8,9 +8,9 @@ namespace MyCompany.Domain
 {
     public class Product
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public bool Discontinued { get; set; }
+        public virtual Guid Id { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Category { get; set; }
+        public virtual bool Discontinued { get; set; }
     }
 }

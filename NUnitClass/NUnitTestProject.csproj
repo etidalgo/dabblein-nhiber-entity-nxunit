@@ -62,12 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NHibernateTest.cs" />
+    <Compile Include="ProductRepository_Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\Product.hbm.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="App_Data\TestDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
