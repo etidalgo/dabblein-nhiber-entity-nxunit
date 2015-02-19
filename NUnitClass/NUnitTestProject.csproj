@@ -61,15 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Product.cs" />
     <Compile Include="NHibernateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SomeClass\SomeClass.csproj">
-      <Project>{d20192e7-7568-44c3-8d21-d51b4e646f5d}</Project>
-      <Name>SomeClass</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\Product.hbm.xml">
@@ -102,6 +95,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyCompany\MyCompany.csproj">
+      <Project>{5930df6b-e120-4267-8986-8bcd167eeb1b}</Project>
+      <Name>MyCompany</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,11 +5,13 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HibernateTest-20150218", "HibernateTest-20150218\HibernateTest-20150218.csproj", "{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeClass", "SomeClass\SomeClass.csproj", "{D20192E7-7568-44C3-8D21-D51B4E646F5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassAndnHibernate", "SomeClass\MyClassAndnHibernate.csproj", "{D20192E7-7568-44C3-8D21-D51B4E646F5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{1FACECBF-23A9-46D4-BAA3-3C0619249D48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitClass\NUnitTestProject.csproj", "{5CD1DA5B-A913-4887-8AE7-8BEA00A3ED20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany", "MyCompany\MyCompany.csproj", "{5930DF6B-E120-4267-8986-8BCD167EEB1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5CD1DA5B-A913-4887-8AE7-8BEA00A3ED20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CD1DA5B-A913-4887-8AE7-8BEA00A3ED20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CD1DA5B-A913-4887-8AE7-8BEA00A3ED20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5930DF6B-E120-4267-8986-8BCD167EEB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5930DF6B-E120-4267-8986-8BCD167EEB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5930DF6B-E120-4267-8986-8BCD167EEB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5930DF6B-E120-4267-8986-8BCD167EEB1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -64,9 +64,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SomeClass\SomeClass.csproj">
+    <ProjectReference Include="..\SomeClass\MyClassAndnHibernate.csproj">
       <Project>{d20192e7-7568-44c3-8d21-d51b4e646f5d}</Project>
-      <Name>SomeClass</Name>
+      <Name>MyClassAndnHibernate</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

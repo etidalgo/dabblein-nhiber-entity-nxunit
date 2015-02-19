@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
+using MyCompany.Domain;
 
-namespace SomeClass.Domain
+
+namespace MyCompany.Tests
 {
     [TestFixture]
     public class NHibernateTest
