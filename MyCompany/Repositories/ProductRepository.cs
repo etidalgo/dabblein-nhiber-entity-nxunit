@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MyCompany.Domain;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace MyCompany.Repositories
 {
@@ -23,27 +24,52 @@ namespace MyCompany.Repositories
  
         public void Update(Product product)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                session.Update(product);
+                transaction.Commit();
+            }
         }
  
         public void Remove(Product product)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                session.Delete(product);
+                transaction.Commit();
+            }
         }
- 
+
         public Product GetById(Guid productId)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+                return session.Get<Product>(productId);
         }
- 
+
         public Product GetByName(string name)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                Product product = session
+                    .CreateCriteria(typeof(Product))
+                    .Add(Restrictions.Eq("Name", name))
+                    .UniqueResult<Product>();
+                return product;
+            }
         }
- 
+
         public ICollection<Product> GetByCategory(string category)
         {
-            throw new NotImplementedException();
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                var products = session
+                    .CreateCriteria(typeof(Product))
+                    .Add(Restrictions.Eq("Category", category))
+                    .List<Product>();
+                return products;
+            }
         }
     }
 }

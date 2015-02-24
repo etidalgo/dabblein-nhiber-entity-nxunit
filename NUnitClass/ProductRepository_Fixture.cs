@@ -73,5 +73,72 @@ namespace MyCompany.Tests
             }
         }
 
+        [Test]
+        public void Can_update_existing_product()
+        {
+            var product = _products[0];
+            product.Name = "Yellow Pear";
+            IProductRepository repository = new ProductRepository();
+            repository.Update(product);
+
+            // use session to try to load the product
+            using (ISession session = _sessionFactory.OpenSession())
+            {
+                var fromDb = session.Get<Product>(product.Id);
+                Assert.AreEqual(product.Name, fromDb.Name);
+            }
+        }
+
+        [Test]
+        public void Can_remove_existing_product()
+        {
+            var product = _products[0];
+            IProductRepository repository = new ProductRepository();
+            repository.Remove(product);
+
+            using (ISession session = _sessionFactory.OpenSession())
+            {
+                var fromDb = session.Get<Product>(product.Id);
+                Assert.IsNull(fromDb);
+            }
+        }
+        [Test]
+        public void Can_get_existing_product_by_id()
+        {
+            IProductRepository repository = new ProductRepository();
+            var fromDb = repository.GetById(_products[1].Id);
+            Assert.IsNotNull(fromDb);
+            Assert.AreNotSame(_products[1], fromDb);
+            Assert.AreEqual(_products[1].Name, fromDb.Name);
+        }
+
+        [Test]
+        public void Can_get_existing_product_by_name()
+        {
+            IProductRepository repository = new ProductRepository();
+            var fromDb = repository.GetByName(_products[1].Name);
+
+            Assert.IsNotNull(fromDb);
+            Assert.AreNotSame(_products[1], fromDb);
+            Assert.AreEqual(_products[1].Id, fromDb.Id);
+        }
+        [Test]
+        public void Can_get_existing_products_by_category()
+        {
+            IProductRepository repository = new ProductRepository();
+            var fromDb = repository.GetByCategory("Fruits");
+
+            Assert.AreEqual(2, fromDb.Count);
+            Assert.IsTrue(IsInCollection(_products[0], fromDb));
+            Assert.IsTrue(IsInCollection(_products[1], fromDb));
+        }
+
+        private bool IsInCollection(Product product, ICollection<Product> fromDb)
+        {
+            foreach (var item in fromDb)
+                if (product.Id == item.Id)
+                    return true;
+            return false;
+        }
     }
 }
