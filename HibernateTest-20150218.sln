@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HibernateTest-20150218", "HibernateTest-20150218\HibernateTest-20150218.csproj", "{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassAndnHibernate", "SomeClass\MyClassAndnHibernate.csproj", "{D20192E7-7568-44C3-8D21-D51B4E646F5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{1FACECBF-23A9-46D4-BAA3-3C0619249D48}"
@@ -15,16 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany", "MyCompany\MyCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTests", "xUnitTests\xUnitTests.csproj", "{E51B3C26-5659-41F5-BD6F-0B82FC7C8FB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{4944D2CC-CD6A-4DC0-9C4D-A7EF15105529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany-EFdbcontext", "MyCompany-EFdbcontext\MyCompany-EFdbcontext.csproj", "{798BBB2E-8CC0-4181-8BB0-1EAA23DEECB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE4F033B-67CD-4DC0-97DB-C1A9E93CAA4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D20192E7-7568-44C3-8D21-D51B4E646F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D20192E7-7568-44C3-8D21-D51B4E646F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D20192E7-7568-44C3-8D21-D51B4E646F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +43,14 @@ Global
 		{E51B3C26-5659-41F5-BD6F-0B82FC7C8FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E51B3C26-5659-41F5-BD6F-0B82FC7C8FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E51B3C26-5659-41F5-BD6F-0B82FC7C8FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4944D2CC-CD6A-4DC0-9C4D-A7EF15105529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4944D2CC-CD6A-4DC0-9C4D-A7EF15105529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4944D2CC-CD6A-4DC0-9C4D-A7EF15105529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4944D2CC-CD6A-4DC0-9C4D-A7EF15105529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798BBB2E-8CC0-4181-8BB0-1EAA23DEECB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798BBB2E-8CC0-4181-8BB0-1EAA23DEECB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798BBB2E-8CC0-4181-8BB0-1EAA23DEECB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798BBB2E-8CC0-4181-8BB0-1EAA23DEECB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
